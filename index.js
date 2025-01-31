@@ -1,13 +1,29 @@
 
 let add = document.querySelector('#add');
 
-let advicesArea = document.querySelector('.advices');
+let tela = document.querySelector('.box-task');
+let mark = document.querySelector('.markup-task');
 
 add.addEventListener('click', function(){
+    
     let inputTask = document.querySelector('input').value;
+
+    tela.style.display='block';
+    mark.style.display='flex';
+
+    tela.textContent= inputTask;
 
     
 })
+
+
+
+
+
+
+
+//API
+let advicesArea = document.querySelector('.advices');
 
 let url = 'https://api.adviceslip.com/advice';
 
@@ -26,5 +42,6 @@ async function advices(){
 }
 
 advices();
+//API
 
 
